@@ -165,12 +165,6 @@ func WriteOutput(birdsArray [BIRD_COUNT]Bird, fileName string) {
     }
 
     writer := csv.NewWriter(f)
-    // var data = [][]string{
-    //     {"Name", "Age", "Occupation"},
-    //     {"Sally", "22", "Nurse"},
-    //     {"Joe", "43", "Sportsman"},
-    //     {"Louis", "39", "Author"},
-    // }
 	var workingString [][]string
 	for i := range birdsArray {
 		positionPair := []string {
@@ -190,7 +184,7 @@ func RunSimulation(){
 	// Initialize
 	var birdsArray [BIRD_COUNT]Bird
 	for i:=0; i<len(birdsArray); i++ {
-		birdsArray[i] = CreateRandomBird(i) // Current bird array at time t
+		birdsArray[i] = CreateRandomBird(i)
 	}
 	var csvFileName string
 	// Compute Loop
